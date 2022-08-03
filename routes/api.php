@@ -20,7 +20,7 @@ use App\Http\Controllers\MessageController;
 
 Route::post('/sanctum/token', TokenController::class);
 
-Route::middleware(['auth:sanctum'])->group(function () {
+// Route::middleware(['auth:sanctum'])->group(function () {
   Route::get('/users/auth', AuthController::class);
   Route::get('/users/{user}', [UserController::class, 'show']);
   Route::get('/users', [UserController::class, 'index']);
@@ -29,4 +29,4 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
   Route::post('/messages', [MessageController::class, 'store']);
   Route::get('/messages', [MessageController::class, 'index']);
-});
+// });

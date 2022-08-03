@@ -17,7 +17,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-      $messages = Message::orderByDesc('created_at')->paginate(6);
+      $messages = Message::orderByDesc('id')->paginate(10);
       return MessageResource::collection($messages);
     }
 
