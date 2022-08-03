@@ -13,7 +13,7 @@ export default {
       return {
         search: '',
         length : '',
-        dataTableTitle : 'Message List',
+        dataTableTitle : 'User List',
         headers: [
           {
             text: 'Id',

@@ -19,5 +19,15 @@ export const useSendReqeustStore = defineStore('useSendReqeustStore', {
             console.log(err)
         })
     },
+    async login(payload)
+    {
+      return axios.post(process.env.VUE_APP_API_URL+'auth/login' , {email : payload.email , password : payload.password})
+      .then(res =>{
+        console.log(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
   },
 })
